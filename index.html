@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cifrador</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" type="text/javascript" defer></script>
+</head>
+<body>
+  <header><h1>ENCRIPTADOR DE MENSAJES ONLINE</h1></header> 
+
+  <p id="parrafo" >El ENCRIPTADOR DE MENSAJES ONLINE te permite cifrar y descifrar información (conocida como texto plano) usando un algoritmo, para hacerla ilegible para cualquier persona. Esta herramienta además, puede pasar tus mensajes cifrados a un archivo para que se los envíes a tus amigos.</p>
+
+  <main class="main">
+    <div class="box">
+      <form id="cifrador" autocomplete="off" action="">
+        <h2>Solo letras minúsculas, sin acento</h2>
+        <input class="cuadroTexto" spellcheck="false" type="text" name="text" id="textoEntrada" placeholder="Ingrese el texto aqui">
+        <input class="botones" type="submit" value="encriptar!" id="btnEncriptar" onclick="return fcifrado();">
+        <input class="botones" type="submit" value="desencriptar!" id="btnDesencriptar" onclick="return fdescifrado();">
+        <div id="div_file">
+          <p id="texto">cargar TXT</p>
+          <input type="file" id="archivo1" />
+          <pre id="contenido-archivo"></pre>  
+        </div>
+      </form>
+    </div>
+ 
+    <div class="box">
+      <form id="descifrador" action="">
+        <h2>Mensaje encriptada:</h2>
+      <input class="cuadroTexto" type="text" id="textoSalida" spellcheck="false" ></input>
+      <input class="botones" type="submit" value="copiar" id="btnCopiado" onclick="return fcopiarTexto();">
+      <input class="botones" type="submit" value="crear TXT" id="btnoutPdf" onclick="return fcrearTxt();">
+    </form>
+      
+    </div>
+    
+  </main>
+
+  
+</body>
+</html>
